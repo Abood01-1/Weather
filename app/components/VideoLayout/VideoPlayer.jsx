@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 const VideoPlayer = ({ bg, hours }) => {
   let url;
-
-  if (hours > 6 && hours < 18) {
+  if (hours >= 6 && hours < 18) {
     url = `/Videos/Day/${bg.toLowerCase()}.mp4`;
   } else {
     url = `/Videos/Night/${bg.toLowerCase()}.mp4`;
